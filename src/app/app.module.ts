@@ -2,21 +2,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule, Router, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { SpotifyLoginButton } from './spotify/login/login-button.component';
+import PostMessageService from './spotify/login.component';
 
-import {HTTP_PROVIDERS} from 'angular2/http';
+const routes : Routes = []
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SpotifyLoginButton,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes, {useHash: false})
   ],
-  providers: [],
-  bootstrap: [AppComponent, HTTP_PROVIDERS]
+  providers: [PostMessageService, SpotifyLoginButton],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
