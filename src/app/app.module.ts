@@ -5,8 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Router, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { SpotifyLoginButton } from './spotify/login/login-button.component';
-import PostMessageService from './spotify/login.component';
+import { SpotifyLoginButton } from './spotify/login-button/login-button.component';
 import { HomeComponent } from './home/home.component';
 
 const routes : Routes = []
@@ -23,7 +22,7 @@ const routes : Routes = []
     HttpModule,
     RouterModule.forRoot(routes, {useHash: false})
   ],
-  providers: [PostMessageService, SpotifyLoginButton],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
