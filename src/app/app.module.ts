@@ -11,7 +11,7 @@ import { CallbackComponent } from './spotify/callback/callback.component';
 
 const routes : Routes = [
   { path: '', component: HomeComponent },
-  { path: 'callback', component: CallbackComponent}
+  { path: 'callback', component: CallbackComponent }
 ]
 
 @NgModule({
@@ -25,7 +25,7 @@ const routes : Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes, {useHash: false})
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
