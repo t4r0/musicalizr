@@ -1,17 +1,25 @@
 .wrapper {
-  background: #651fff;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  background:
+    linear-gradient(
+      45deg,
+      rgba(#651fff, 0.80),
+      rgba(#4de1df, 0.60)
+    ),
+    url('../../assets/image-background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 
   color: white;
-
+  display: flex;
+  flex-direction: column;
   font-family: sans-serif;
   font-weight: bolder;
-
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
   h1 {
     text-align: center;
     max-width: 500px;
