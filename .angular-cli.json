@@ -22,9 +22,7 @@
         "styles.scss",
         "../node_modules/normalize.css/normalize.css"
       ],
-      "scripts": [
-        "../node_modules/angular2-spotify/angular2-spotify.js"
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
