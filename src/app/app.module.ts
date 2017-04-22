@@ -7,13 +7,15 @@ import { RouterModule, Router, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SpotifyLoginButton } from './spotify/login/login-button.component';
 import PostMessageService from './spotify/login.component';
+import { HomeComponent } from './home/home.component';
 
 const routes : Routes = []
 
 @NgModule({
   declarations: [
     AppComponent,
-    SpotifyLoginButton
+    SpotifyLoginButton,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
