@@ -8,10 +8,13 @@ import { AppComponent } from './app.component';
 import { SpotifyLoginButton } from './spotify/login-button/login-button.component';
 import { HomeComponent } from './home/home.component';
 import { CallbackComponent } from './spotify/callback/callback.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PlaylistComponent } from './playlist/playlist.component';
 
 const routes : Routes = [
   { path: '', component: HomeComponent },
-  { path: 'callback', component: CallbackComponent }
+  { path: 'callback', component: CallbackComponent },
+  { path: 'dashboard', component: DashboardComponent}
 ]
 
 @NgModule({
@@ -19,7 +22,9 @@ const routes : Routes = [
     AppComponent,
     SpotifyLoginButton,
     HomeComponent,
-    CallbackComponent
+    CallbackComponent,
+    DashboardComponent,
+    PlaylistComponent
   ],
   imports: [
     BrowserModule,
