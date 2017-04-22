@@ -7,14 +7,19 @@ import { RouterModule, Router, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SpotifyLoginButton } from './spotify/login-button/login-button.component';
 import { HomeComponent } from './home/home.component';
+import { CallbackComponent } from './spotify/callback/callback.component';
 
-const routes : Routes = []
+const routes : Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'callback', component: CallbackComponent}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     SpotifyLoginButton,
-    HomeComponent
+    HomeComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
