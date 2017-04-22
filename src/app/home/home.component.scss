@@ -27,9 +27,7 @@
   }
 
   .logo {
-    margin: 0px 16px;
     padding: 0;
-    width: 150px;
     display: inline-block;
     img {
       max-width: 100%;
@@ -37,6 +35,59 @@
 
     h1 {
       max-width: 100%;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    width: 90vw;
+    padding: 0vw 5vw;
+
+    .logo {
+      width: 60%;
+      margin: 0 auto 16px;
+      display: block;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    spotify-login-button {
+      width: 80%;
+
+    }
+  }
+}
+
+@media only screen and (min-width: 501px) {
+  .wrapper {
+    .logos {
+      font-size: 0px;
+      width: 80%;
+      margin: 0 auto;
+      .logo {
+        width: 45%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        &:first-child {
+          margin-right: 10%;
+        }
+      }
+    }
+
+    spotify-login-button {
+      width: 350px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .wrapper {
+    .logos {
+      width: 50%;
     }
   }
 }
