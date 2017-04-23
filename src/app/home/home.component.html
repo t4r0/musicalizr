@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" *ngIf="!auth.currentUser()">
   <section class="logos">
     <figure class="logo">
       <img src="../assets/logo.png" alt="pixela logo">
@@ -17,3 +17,4 @@
     <li><a href="https://pixela.com.gt/">Website</a></li>
   </ul>
 </div>
+<app-dashboard *ngIf="auth.currentUser()"></app-dashboard>
