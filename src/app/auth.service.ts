@@ -15,7 +15,7 @@ export class AuthService {
   currentUser() : any {
     let user = localStorage.getItem('pixela-angular-attack-user');
     if(user){
-      this.user = user;
+      this.user = JSON.parse(user);
       return this.user;
     }
     return null
@@ -30,7 +30,7 @@ export class AuthService {
       .map( response => {
         let userData = response.json() || {};
         userData.token = token;
-        localStorage.setItem('pixela-angular-attack-user', userData)
+        localStorage.setItem('pixela-angular-attack-user', JSON.stringify(userData))
         return userData;
       })
       .catch(this.handleError);

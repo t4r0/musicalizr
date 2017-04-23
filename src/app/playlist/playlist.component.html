@@ -1,9 +1,9 @@
 <div class="playlist">
   <figure class="playlist-logo">
-    <img src="../assets/playlist.png" alt="playlist">
+    <img [src]="playlist.images[0].url" alt="playlist">
   </figure>
   <section class="playlist-info">
-    <p>Playlist No. 1</p>
-    <p>Pablo Bautista</p>
+    <p>{{ playlist.name }}</p>
+    <p>{{ playlist.owner.id }}</p>
   </section>
 </div>

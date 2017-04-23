@@ -6,6 +6,7 @@ import { AuthService } from '../auth.service';
 
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class SpotifyService {
@@ -16,7 +17,8 @@ export class SpotifyService {
 
   }
 
-  userPlaylists() : Observable<Playlist[]> {
+  userPlaylists() : Observable<any> {
+    console.log(this.auth.currentUser());
     var headers = new Headers({'Authorization' : `Bearer ${this.auth.currentUser().token}`});
     var options = new RequestOptions({headers: headers});
     var endpoint = this.rootURI + 'me/playlists'
@@ -41,6 +43,6 @@ export class SpotifyService {
 
   private extractData(res: Response) {
     let body = res.json();
-    return body.data || {}
+    return body || {}
   }
 }
