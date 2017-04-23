@@ -12,7 +12,7 @@ export class SpotifyLoginButton {
   }
 
   login() : void {
-    var params = 'client_id=0751903c1b62406880128de801b635f9&response_type=token&redirect_uri=http://localhost:4200/callback';
+    var params = 'client_id=0751903c1b62406880128de801b635f9&response_type=token&redirect_uri=https://angular-attack-b5838.firebaseapp.com/callback';
     var options = 'menubar=no,location=no,resizable=no,scrollbars=no,status=no,left=100,top=10,width=400,height=500';
     window.open('https://accounts.spotify.com/authorize?'+params, 'Spotify',options);
 
