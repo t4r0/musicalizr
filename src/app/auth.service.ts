@@ -36,6 +36,11 @@ export class AuthService {
       .catch(this.handleError);
   }
 
+  logout() : Observable<any> {
+    localStorage.removeItem('pixela-angular-attack-user');
+    return null;
+  }
+
   private handleError(error: any) {
     let errMsg: string;
     if (error instanceof Response) {
