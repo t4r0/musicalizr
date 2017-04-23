@@ -18,13 +18,25 @@ export class SpotifyService {
   }
 
   userPlaylists() : Observable<any> {
-    console.log(this.auth.currentUser());
-    var headers = new Headers({'Authorization' : `Bearer ${this.auth.currentUser().token}`});
-    var options = new RequestOptions({headers: headers});
     var endpoint = this.rootURI + 'me/playlists'
+    let options = this.getHeaders();
     return this.http.get(endpoint, options)
            .map(this.extractData)
            .catch(this.handleError);
+  }
+
+  playlistTracks(userId : string, playlistId : string) {
+    var endpoint = `${this.rootURI}/users/${userId}/playlists/${playlistId}/tracks`
+    let options = this.getHeaders();
+    return this.http.get(endpoint, options)
+           .map(this.extractData)
+           .catch(this.handleError);
+  }
+
+  private getHeaders() : RequestOptions {
+    var headers = new Headers({'Authorization' : `Bearer ${this.auth.currentUser().token}`});
+    var options = new RequestOptions({headers: headers});
+    return options;
   }
 
   private handleError(error: Response | any){
