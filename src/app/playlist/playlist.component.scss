@@ -7,9 +7,7 @@
   margin-top: 5px;
 
   &:hover {
-    background-color: rgba(#E6E6E6, 0.5) ;
     cursor: pointer;
-
     .playlist-info {
       p {
         color: #651FFF;
@@ -40,6 +38,7 @@
       margin: 0;
       margin-bottom: 1px;
       color: #696767;
+      transition: color 150ms ease-in;
     }
 
     p:first-child {

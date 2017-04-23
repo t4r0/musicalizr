@@ -1,0 +1,14 @@
+<div class="Player">
+  <div class="viewer">
+
+  </div>
+  <figure class="thumb">
+    <img *ngIf="playlist.images" [src]="playlist.images[0].url" alt="">
+  </figure>
+  <p>{{playlist.name}}</p>
+</div>
+<perfect-scrollbar class="container" [config]="config">
+  <div class="Tracks" *ngIf="playlist">
+    <app-track *ngFor="let track of tracks" [track]="track"></app-track>
+  </div>
+</perfect-scrollbar>

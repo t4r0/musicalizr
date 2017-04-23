@@ -2,6 +2,8 @@
   <figure>
     <img [src]="user.images[0].url">
   </figure>
-  <p>{{user.display_name}}</p>
-  <a (click)="logout()">logout</a>
+  <div class="User-info">
+    <p>{{user.display_name}}</p>
+    <a class="logout" (click)="logout()">logout</a>
+  </div>
 </section>

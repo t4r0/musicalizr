@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Playlist } from '../spotify/classes/playlist';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+  playlist : any = {};
   constructor() { }
 
   ngOnInit() {
+  }
+
+  setPlaylist(playlist) {
+    console.log(playlist);
+    this.playlist = playlist;
   }
 
 }

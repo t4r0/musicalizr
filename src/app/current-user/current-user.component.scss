@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   padding: 16px 8px;
-  background-color: rgba(#E6E6E6, 0.3);
+  background-color: rgba(#000, 0.01);
 
   figure {
     width: 48px;
@@ -25,9 +25,23 @@
     font-size: 1rem;
     color: #696767;
     font-weight: bold;
+    margin: 0px;
+    margin-bottom: 8px;
   }
+
   figure, p {
     display: inline-block;
+  }
 
+  .logout {
+    display: block;
+    color: #696767;
+    cursor: pointer;
+    font-size: 12px;
+    transition: color 150ms ease-in;
+
+    &:hover {
+      color: #651FFF;
+    }
   }
 }
