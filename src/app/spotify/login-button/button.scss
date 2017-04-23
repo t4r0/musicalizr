@@ -14,7 +14,23 @@
   cursor: pointer;
   transition: all 0.2s ease;
 
+  .buton-content {
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+  }
+
   &:hover {
     background-color: lighten(#1DB954, 3.5%);
+  }
+
+  i {
+    margin-left: 5px;
+    padding: 0;
+    font-style: normal;
+    vertical-align: center;
+    text-align: center;
+    line-height: 42px;
   }
 }
