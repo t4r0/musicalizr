@@ -1,0 +1,7 @@
+<section class="User">
+  <figure>
+    <img [src]="user.images[0].url">
+  </figure>
+  <p>{{user.display_name}}</p>
+  <a (click)="logout()">logout</a>
+</section>
