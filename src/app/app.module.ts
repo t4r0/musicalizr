@@ -16,6 +16,8 @@ import { AuthService } from './auth.service';
 import { PlaylistsComponent } from './playlists/playlists.component';
 import { SpotifyService } from './spotify/provider';
 import { CurrentUserComponent } from './current-user/current-user.component';
+import { PlayerComponent } from './player/player.component';
+import { TrackComponent } from './track/track.component';
 
 const routes : Routes = [
   { path: '', component: HomeComponent },
@@ -35,7 +37,9 @@ const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DashboardComponent,
     PlaylistComponent,
     PlaylistsComponent,
-    CurrentUserComponent
+    CurrentUserComponent,
+    PlayerComponent,
+    TrackComponent
   ],
   imports: [
     BrowserModule,
