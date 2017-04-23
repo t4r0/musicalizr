@@ -12,7 +12,7 @@ export class CallbackComponent implements OnInit {
 
   ngOnInit() {
     var hash : any = {};
-    var accepted_origin = "http://localhost:4200/";
+    var accepted_origin = "http://localhost:4200/callback";
 
     window.location.hash.replace(/^#\/?/, '').split('&').forEach(function(kv) {
        var spl = kv.indexOf('=');
