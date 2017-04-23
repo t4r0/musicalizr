@@ -38,32 +38,6 @@
       color: #696767;
     }
 
-    .Tracks {
-      height: 100%;
-      max-height: 240px;
-      ul {
-        list-style: none;
-        padding: 0;
-        font-size: 0px;
-        height: 100%;
-        li {
-          display: inline-block;
-          font-size: 1rem;
-          width: 25%;
-          position: relative;
-          overflow: hidden;
-          height: 100%;
-          img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 100%;
-            height: auto;
-            transform: translate(-50%, -50%);
-          }
-        }
-      }
-    }
     .Player, .Tracks {
       width: 100%;
       box-sizing: border-box;
@@ -72,4 +46,12 @@
   .Playlist, .Content {
     order: 1;
   }
+
+  app-player {
+    display: flex;
+    width: 100% !important;
+    flex-flow: column;
+    height: 100%;
+  }
+
 }

@@ -26,7 +26,7 @@ export class SpotifyService {
   }
 
   playlistTracks(userId : string, playlistId : string) {
-    var endpoint = `${this.rootURI}/users/${userId}/playlists/${playlistId}/tracks`
+    var endpoint = `${this.rootURI}users/${userId}/playlists/${playlistId}/tracks`
     let options = this.getHeaders();
     return this.http.get(endpoint, options)
            .map(this.extractData)
