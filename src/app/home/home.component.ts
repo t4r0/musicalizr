@@ -7,7 +7,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  title = 'We are building an awesome app, come back soon!';
+  title = 'Preview your spotify playlists with animations';
 
   constructor(public auth : AuthService ) { }
 
