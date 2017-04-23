@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'spotify-login-button',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class SpotifyLoginButton {
 
-  constructor() {
+  constructor(private authService : AuthService) {
   }
 
   login() : void {
@@ -18,7 +19,8 @@ export class SpotifyLoginButton {
     window.addEventListener('message', (event) => {
      var hash = JSON.parse(event.data);
      if (hash.type == 'access_token_spotify') {
-        console.log(hash);
+        this.authService.setUser(hash.access_token)
+        .subscribe( user => console.log(user), error => console.log(error));
      }
     }, false)
 
