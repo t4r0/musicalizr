@@ -12,6 +12,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PlaylistComponent } from './playlist/playlist.component';
 
 import { AuthService } from './auth.service';
+import { PlaylistsComponent } from './playlists/playlists.component';
+import { SpotifyService } from './spotify/provider';
 
 const routes : Routes = [
   { path: '', component: HomeComponent },
@@ -26,7 +28,8 @@ const routes : Routes = [
     HomeComponent,
     CallbackComponent,
     DashboardComponent,
-    PlaylistComponent
+    PlaylistComponent,
+    PlaylistsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ const routes : Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AuthService],
+  providers: [AuthService, SpotifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
