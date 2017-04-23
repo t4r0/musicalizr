@@ -17,4 +17,5 @@ export class Track {
   track_number: number;
   type: string;
   uri: string;
+  track: any;
 }
