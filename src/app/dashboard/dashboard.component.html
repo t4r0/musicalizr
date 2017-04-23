@@ -2,20 +2,10 @@
   <section class="Sidenav">
     <app-current-user></app-current-user>
     <perfect-scrollbar class="Playlist container">
-      <app-playlists></app-playlists>
+      <app-playlists (choosePlaylist)="setPlaylist($event)"></app-playlists>
     </perfect-scrollbar>
   </section>
   <section class="Content">
-    <div class="Player">
-      <p>Player</p>
-    </div>
-    <div class="Tracks">
-      <ul>
-        <li><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Thegetawayalbum.jpg/220px-Thegetawayalbum.jpg"></li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Thegetawayalbum.jpg/220px-Thegetawayalbum.jpg"></li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Thegetawayalbum.jpg/220px-Thegetawayalbum.jpg"></li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Thegetawayalbum.jpg/220px-Thegetawayalbum.jpg"></li>
-      </ul>
-    </div>
+    <app-player [playlist]="playlist"></app-player>
   </section>
 </div>

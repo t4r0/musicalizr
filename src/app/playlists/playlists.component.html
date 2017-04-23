@@ -1,1 +1,1 @@
-<app-playlist *ngFor="let playlist of playlists" [playlist]="playlist"></app-playlist>
+<app-playlist *ngFor="let playlist of playlists" [playlist]="playlist" (click)="setCurrentPlaylist(playlist)"></app-playlist>
