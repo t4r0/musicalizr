@@ -8,7 +8,7 @@
     </figure>
   </section>
   <h1>{{title}}</h1>
-  <spotify-login-button></spotify-login-button>
+  <spotify-login-button *ngIf="!auth.currentUser()"></spotify-login-button>
   <ul class="Social">
     <li>Visit us:</li>
     <li><a href="https://www.facebook.com/PixelaGT">Facebook</a></li>

@@ -11,6 +11,8 @@ import { CallbackComponent } from './spotify/callback/callback.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PlaylistComponent } from './playlist/playlist.component';
 
+import { AuthService } from './auth.service';
+
 const routes : Routes = [
   { path: '', component: HomeComponent },
   { path: 'callback', component: CallbackComponent },
@@ -32,7 +34,7 @@ const routes : Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
